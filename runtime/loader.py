@@ -65,3 +65,13 @@ def list_character_files(character):
         p.name
         for p in root.rglob("*.md")
     ])
+
+def load_document(character, document):
+    from pathlib import Path
+
+    path = Path.cwd() / "T3_Dossiers" / character / document
+
+    if path.exists():
+        return path.read_text(encoding="utf-8")
+
+    return None
