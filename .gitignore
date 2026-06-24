@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Runtime cache
+runtime/cache/
+runtime/temp/
+runtime/logs/
+
+# Generated outputs
+Generated/
+TemporaryOutput/
+Draft/
+
+# Python environment files
+.env
+.env.*
