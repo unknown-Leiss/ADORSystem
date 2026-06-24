@@ -1,3 +1,5 @@
+from loader import bootstrap
+
 print("ADOR Runtime Controller")
 print()
 
@@ -10,9 +12,10 @@ print("5. Verification")
 print("6. PoC")
 
 choice = input("> ").strip().translate(str.maketrans("１２３４５６", "123456"))
-print(f"Selected: {repr(choice)} / length={len(choice)}")
+print(f"Selected: {repr(choice)}")
 
 if choice == "2":
     print("Reconstruction Mode")
+    bootstrap()
 else:
-    print("Not implemented yet.")
+    print("Unknown Mode")
