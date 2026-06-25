@@ -75,3 +75,27 @@ def load_document(character, document):
         return path.read_text(encoding="utf-8")
 
     return None
+
+def detect_document_type(document):
+    if "[T3-Character]" in document:
+        return "Character Core"
+
+    elif "[T3-Rail]" in document:
+        return "Operational Rail"
+
+    elif "[T3-Recognition]" in document:
+        return "Recognition Model"
+
+    elif "[T3-PersistentState]" in document:
+        return "Persistent State"
+
+    elif "[T3-PhysicalSpecification]" in document:
+        return "Physical Specification"
+
+    elif "[T2-Reconstruction]" in document:
+        return "Reconstruction Procedure"
+
+    elif "[T2-Verification]" in document:
+        return "Verification Specification"
+
+    return "Unknown"
