@@ -3,7 +3,10 @@ from loader import (
     list_characters,
     list_character_files,
     load_document,
+    detect_document_type,
 )
+
+from router import route
 
 print("ADOR Runtime Controller")
 print()
@@ -59,21 +62,14 @@ if choice == "2":
         doc_index = int(doc_choice) - 1
 
         if 0 <= doc_index < len(files):
-            document = files[doc_index]
+            document= files[doc_index]
             content = load_document(selected, document)
-            if content:
-                print(f"Loading document: {document}")
-                print(content)
-            else:
-                print("Failed to load document")
-            content = load_document(selected, document)
+            doc_type = detect_document_type(document)
 
             if content:
-                print()
-                print("=== Document Preview ===")
-                print(content[:1000])
-        else:
-            print("Invalid Document Selection")
+                route(doc_type, content)
+            else:
+                print("Failed to load document")
     else:
         print("Invalid Selection")
 else:
