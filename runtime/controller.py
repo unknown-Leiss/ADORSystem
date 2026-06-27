@@ -1,3 +1,5 @@
+from package_reader import load_character_package
+
 from loader import (
     bootstrap,
     list_characters,
@@ -46,31 +48,11 @@ if choice == "2":
     if 0 <= index < len(chars):
         selected = chars[index]
         print(f"Loading: {selected}")
-        files = list_character_files(selected)
-        print()
-        print("Documents:")
-        for i, file in enumerate(files, start=1):
-            print(f"{i}. {file}")
 
-        print()
+        load_character_package(selected)
 
-        doc_choice = input("Select Document > ").strip().translate(str.maketrans("１２３４５６７８９０", "1234567890"))
-        if not doc_choice.isdigit():
-            print("Invalid Selection")
-            exit()
-
-        doc_index = int(doc_choice) - 1
-
-        if 0 <= doc_index < len(files):
-            document= files[doc_index]
-            content = load_document(selected, document)
-            doc_type = detect_document_type(document)
-
-            if content:
-                route(doc_type, content)
-            else:
-                print("Failed to load document")
     else:
         print("Invalid Selection")
+        
 else:
     print("Unknown Mode")

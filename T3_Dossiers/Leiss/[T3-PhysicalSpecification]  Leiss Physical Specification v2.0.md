@@ -1,3 +1,74 @@
+━━━━━━━━━━━━━━━━━━
+RAG SEARCH ANCHOR
+━━━━━━━━━━━━━━━━━━
+
+Document Title:
+[T3-PhysicalSpecification] Leiss Physical Specification v2.0
+
+Character Name:
+Leiss
+
+Character Name JP:
+リース
+
+Document Type:
+Physical Specification
+
+ADOR Layer:
+T3_Character
+
+Document Role:
+Physical Anchor Source
+
+This document is the Physical Specification for Leiss.
+
+This document defines physical anchors that support Recognition Stability.
+
+This document does not define Character Identity.
+
+Character Core remains the Identity Source.
+
+Search Keywords:
+Leiss
+リース
+Leiss Physical Specification
+Leiss Physical Anchor
+Leiss Visual Core Layer
+Leiss Body Specification
+Leiss Facial Specification
+Leiss Eye Specification
+Leiss Hair Specification
+Leiss Recognition Structure
+Leiss Identity Supporting
+Leiss Eye Color
+Leiss Hair Color
+Leiss Hair Length
+Leiss Body Balance
+Leiss Physical Recognition
+T3 Physical Leiss
+T3_PhysicalSpecification Leiss
+ADOR Physical Specification Leiss
+Physical Anchor Leiss
+
+Contains:
+- Body Specification
+- Facial Specification
+- Eye Specification
+- Hair Specification
+- Recognition Structure
+- Identity Layer
+- Recognition Tolerance
+- Final Principle
+
+Source Use:
+Use this document as Physical Anchor evidence.
+Use this document to support Recognition Stability.
+Do not use this document as Identity Source.
+Do not allow physical traits alone to define Leiss.
+Do not allow visual-only reconstruction.
+
+━━━━━━━━━━━━━━━━━━
+
 # **\[T3-PhysicalSpecification\]**
 
 Leiss Physical Specification v2.0

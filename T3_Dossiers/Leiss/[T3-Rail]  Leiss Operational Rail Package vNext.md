@@ -1,3 +1,90 @@
+━━━━━━━━━━━━━━━━━━
+RAG SEARCH ANCHOR
+━━━━━━━━━━━━━━━━━━
+
+Document Title:
+[T3-Rail] Leiss Operational Rail Package vNext
+
+Character Name:
+Leiss
+
+Character Name JP:
+リース
+
+Document Type:
+Operational Rail
+
+ADOR Layer:
+T3_Character
+
+Document Role:
+Character Reconstruction Support Layer
+
+This document is the Operational Rail Package for Leiss.
+
+This document supports Character Reconstruction.
+
+This document does not define Character Identity.
+
+Character Core remains the Identity Source.
+
+Operational Rail must not overwrite Character Core.
+
+Search Keywords:
+Leiss
+リース
+Leiss Operational Rail
+Leiss Rail Package
+Leiss Character Reconstruction Support
+Leiss Character Reconstruction Support Architecture
+Leiss Face Stability Rail
+Leiss Awareness Rail
+Leiss Body Gravity Rail
+Leiss Hair Preservation Rail
+Leiss Presence Rail
+Leiss Atmosphere Support Rail
+Leiss Environment Stabilization Rail
+Leiss Variation Safety Rail
+Leiss Operational Recovery Rail
+Leiss Scenario Reconstruction Rail
+Leiss Operational Intent Rail
+Leiss Runtime Separation Rail
+Leiss Adaptive Rail Selection Rail
+T3 Rail Leiss
+T3_Rail Leiss
+ADOR Operational Rail Leiss
+Operational Rail Leiss
+
+Contains:
+- Runtime Position
+- Face Stability Rail
+- Awareness Rail
+- Body Gravity Rail
+- Hair Preservation Rail
+- Presence Rail
+- Atmosphere Support Rail
+- Environment Stabilization Rail
+- Variation Safety Rail
+- Operational Recovery Rail
+- Scenario Reconstruction Rail
+- Operational Intent Rail
+- Runtime Separation Rail
+- Adaptive Rail Selection Rail
+- Character Source Routing Rail
+- Character Verification Rail
+- Reconstruction Gate Rail
+- Meaning Reconstruction Rail
+
+Source Use:
+Use this document as Operational Rail evidence.
+Use this document to support scenario adaptation and prompt reconstruction.
+Do not use this document as Identity Source.
+Do not allow Rail to define Leiss.
+Do not apply all rails by default.
+Extract only required rails.
+
+━━━━━━━━━━━━━━━━━━
+
 \[T3-Rail\]
 
 Leiss Operational Rail Package vNext

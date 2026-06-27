@@ -1,3 +1,68 @@
+━━━━━━━━━━━━━━━━━━
+RAG SEARCH ANCHOR
+━━━━━━━━━━━━━━━━━━
+
+Document Title:
+[T3-Character] Leiss Character Core v2.1
+
+Character Name:
+Leiss
+
+Character Name JP:
+リース
+
+Document Type:
+Character Core
+
+ADOR Layer:
+T3_Character
+
+Document Role:
+Identity Source
+
+This document is the Character Core for Leiss.
+
+This document defines the Identity Source for Leiss.
+
+This document must be prioritized during Named Character Reconstruction for Leiss.
+
+Search Keywords:
+Leiss
+リース
+Leiss Character Core
+Leiss Character Package
+Leiss Identity Source
+Leiss Character Identity
+Leiss Character Reconstruction
+Leiss Recognition Continuity
+Leiss Meaning Continuity
+Leiss Awareness Continuity
+Leiss Presence Continuity
+Leiss Quietly Existing Person
+T3 Character Leiss
+T3_Character Leiss
+ADOR Character Leiss
+ADOR Character Package Leiss
+Identity Source Leiss
+
+Contains:
+- Identity Definition
+- Character Identification Anchor
+- Recognition Structure
+- Awareness Structure
+- Presence Structure
+- Persistent State Principle
+- Character Core Verification
+- Reconstruction Gate Alignment
+
+Source Use:
+Use this document as Identity Source evidence.
+Do not use this document as Physical Specification.
+Do not use this document as Operational Rail.
+Do not treat generated outputs as Identity Source.
+
+━━━━━━━━━━━━━━━━━━
+
 \[T3-Character\]
 
 Leiss Character Core v2.1

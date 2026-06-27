@@ -1,3 +1,71 @@
+━━━━━━━━━━━━━━━━━━
+RAG SEARCH ANCHOR
+━━━━━━━━━━━━━━━━━━
+
+Document Title:
+[T3-Recognition] Leiss Recognition Model v1.0
+
+Character Name:
+Leiss
+
+Character Name JP:
+リース
+
+Document Type:
+Recognition Model
+
+ADOR Layer:
+T3_Character
+
+Document Role:
+Recognition Anchor Source
+
+This document is the Recognition Model for Leiss.
+
+This document defines how Leiss is recognized as Leiss.
+
+This document does not define Character Identity.
+
+Character Core remains the Identity Source.
+
+Search Keywords:
+Leiss
+リース
+Leiss Recognition Model
+Leiss Recognition Anchor
+Leiss Recognition Continuity
+Leiss Recognition Cause
+Leiss Recognition Direction
+Leiss Recognition Critical Elements
+Leiss Eye Corner
+Leiss Eye Shape
+Leiss Hair Length
+Leiss Hair Color
+Leiss Body Silhouette
+Leiss Cute before Beautiful
+Leiss Gentle before Impressive
+T3 Recognition Leiss
+T3_Recognition Leiss
+ADOR Recognition Leiss
+Recognition Anchor Leiss
+
+Contains:
+- Recognition Principle
+- Recognition Direction
+- Recognition Critical Elements
+- Recognition Tolerance
+- Recognition Boundary
+- Recognition Failure Pattern
+- Recognition Priority
+
+Source Use:
+Use this document as Recognition Anchor evidence.
+Do not use this document as Identity Source.
+Do not use this document as complete Physical Specification.
+Do not allow Recognition Model to overwrite Character Core.
+
+━━━━━━━━━━━━━━━━━━
+
 \[T3-Recognition\]
 
 Leiss Recognition Model v1.0

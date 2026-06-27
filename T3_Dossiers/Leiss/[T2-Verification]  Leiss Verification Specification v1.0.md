@@ -1,3 +1,76 @@
+━━━━━━━━━━━━━━━━━━
+RAG SEARCH ANCHOR
+━━━━━━━━━━━━━━━━━━
+
+Document Title:
+[T2-Verification] Leiss Verification Specification v1.0
+
+Character Name:
+Leiss
+
+Character Name JP:
+リース
+
+Document Type:
+Verification Specification
+
+ADOR Layer:
+T2_Runtime
+
+Document Role:
+Identity Continuity Verification Source
+
+This document defines verification criteria for Leiss Reconstruction.
+
+This document is not Character Definition.
+
+This document checks whether Character Core was properly referenced and reconstructed.
+
+This document verifies Identity Continuity, not image similarity.
+
+Search Keywords:
+Leiss
+リース
+Leiss Verification Specification
+Leiss Verification Layer
+Leiss Identity Continuity Verification
+Leiss Reconstruction Verification
+Leiss Recognition Verification
+Leiss Meaning Verification
+Leiss Awareness Verification
+Leiss Presence Verification
+Leiss Persistent State Verification
+Leiss Physical Verification
+Leiss Verification Failure
+Leiss Verification Completion
+T2 Verification Leiss
+T2_Verification Leiss
+ADOR Verification Leiss
+Identity Continuity Check Leiss
+
+Contains:
+- Purpose
+- Verification Principle
+- Verification Route
+- Recognition Verification
+- Meaning Verification
+- Awareness Verification
+- Presence Verification
+- Persistent State Verification
+- Physical Verification
+- Verification Failure
+- Verification Completion
+- Final Principle
+
+Source Use:
+Use this document as Verification evidence.
+Do not use this document as Character Definition.
+Do not use this document as Identity Source.
+Do not verify by image similarity alone.
+Do not treat physical similarity alone as Verification Complete.
+
+━━━━━━━━━━━━━━━━━━
+
 \[T2-Verification\]
 
 Leiss Verification Specification v1.0

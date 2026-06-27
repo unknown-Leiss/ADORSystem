@@ -1,3 +1,74 @@
+━━━━━━━━━━━━━━━━━━
+RAG SEARCH ANCHOR
+━━━━━━━━━━━━━━━━━━
+
+Document Title:
+[T3-PersistentState] Leiss Persistent State v1.1
+
+Character Name:
+Leiss
+
+Character Name JP:
+リース
+
+Document Type:
+Persistent State
+
+ADOR Layer:
+T3_Character
+
+Document Role:
+Identity Persistence Source
+
+This document is the Persistent State document for Leiss.
+
+This document defines continuity layers between Character Core and Physical Specification.
+
+This document supports Identity Persistence Under Variance.
+
+This document does not replace Character Core.
+
+Search Keywords:
+Leiss
+リース
+Leiss Persistent State
+Leiss Identity Persistence
+Leiss Identity Persistence Layer
+Leiss Persistent State Principle
+Leiss Recognition Continuity
+Leiss Meaning Continuity
+Leiss Awareness Continuity
+Leiss Presence Continuity
+Leiss Interpersonal Continuity
+Leiss Quietly Existing Person
+Leiss Tier1 Identity Critical
+Leiss Tier2 Identity Supporting
+Leiss Tier3 Identity Expression
+T3 Persistent State Leiss
+T3_PersistentState Leiss
+ADOR Persistent State Leiss
+Identity Persistence Leiss
+
+Contains:
+- Purpose
+- Identity Persistence
+- Awareness Persistence
+- Presence Persistence
+- Recognition Direction
+- Identity Critical Elements
+- Identity Supporting Elements
+- Identity Expression
+- Identity Evaluation
+- Final Principle
+
+Source Use:
+Use this document as Persistent State evidence.
+Use this document to evaluate Identity Persistence Under Variance.
+Do not use this document as Character Core replacement.
+Do not allow scenario, pose, clothing, environment, or emotion to overwrite Persistent State.
+
+━━━━━━━━━━━━━━━━━━
+
 \[T3-PersistentState\]
 
 Leiss Persistent State v1.1

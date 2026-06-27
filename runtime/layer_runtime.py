@@ -55,15 +55,21 @@ def apply_layer(content, layer_name):
     print(f"Document Role: {layer_data['document_role']}")
     print()
 
+    print()
+
+    if layer_name == "reconstruction":
+        check_required_layers([
+            "identity",
+            "behavior",
+            "recognition",
+            "verification",
+        ])
+
     show_runtime_state()
 
     return runtime_state
 
 
-def show_runtime_state():
-    print()
-    print("=== Runtime State ===")
-    print(runtime_state)
 
 def show_runtime_state():
     print()
@@ -82,3 +88,21 @@ def show_runtime_state():
         print(f"  Document Type: {layer_data['document_type']}")
         print(f"  Document Role: {layer_data['document_role']}")
         print()
+
+def check_required_layers(required_layers):
+    print()
+    print("=== Layer Requirement Check ===")
+    print("-------------------------------")
+
+    ready = True
+
+    for layer_name in required_layers:
+        layer_data = runtime_state.get(layer_name)
+
+        if layer_data:
+            print(f"{layer_name}: OK")
+        else:
+            print(f"{layer_name}: MISSING")
+            ready = False
+
+    return ready
