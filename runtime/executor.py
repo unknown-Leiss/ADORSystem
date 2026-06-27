@@ -11,20 +11,18 @@ def execute_operational_rail(content):
     print("Operational Rail Loaded")
 
 def execute_verification(content):
-    print()
-    print("=== Verification Executor ===")
-    print("Preparing Verification...")
-    print()
+    print("\n=== Verification Executor ===")
+    apply_layer(content, "verification")
+    print("Verification Loaded")
 
 def execute_reconstruction(content):
-    print()
-    print("=== Reconstruction Executor ===")
-    print("Preparing Reconstruction...")
-    print()
+    print("\n=== Reconstruction Executor ===")
+    apply_layer(content, "reconstruction")
+    print("Reconstruction Loaded")
 
 def execute_unknown(content):
-    print()
-    print("Unknown Executor")
+    print("\n=== Unknown Executor ===")
+    print("Unknown executor called")
 
 def execute_recognition(content):
     print("\n=== Recognition Executor ===")

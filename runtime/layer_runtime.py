@@ -1,5 +1,9 @@
 runtime_state = {
-    "layers": {}
+    "identity": {},
+    "behavior": {},
+    "recognition": {},
+    "verification": {},
+    "reconstruction": {}
 }
 
 
@@ -39,7 +43,7 @@ def apply_layer(content, layer_name):
         "document_role": read_header_value(lines, "Document Role:"),
     }
 
-    runtime_state["layers"][layer_name] = layer_data
+    runtime_state[layer_name] = layer_data
 
     print()
     print("=== Layer Runtime Updated ===")
@@ -51,6 +55,8 @@ def apply_layer(content, layer_name):
     print(f"Document Role: {layer_data['document_role']}")
     print()
 
+    show_runtime_state()
+
     return runtime_state
 
 
@@ -58,3 +64,21 @@ def show_runtime_state():
     print()
     print("=== Runtime State ===")
     print(runtime_state)
+
+def show_runtime_state():
+    print()
+    print("=== Runtime State ===")
+    print("---------------------")
+
+    for layer_name, layer_data in runtime_state.items():
+        print(f"[{layer_name}]")
+
+        if not layer_data:
+            print("  empty")
+            continue
+
+        print(f"  Document Title: {layer_data['document_title']}")
+        print(f"  Character Name: {layer_data['character_name']}")
+        print(f"  Document Type: {layer_data['document_type']}")
+        print(f"  Document Role: {layer_data['document_role']}")
+        print()
