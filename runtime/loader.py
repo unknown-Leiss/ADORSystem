@@ -84,7 +84,7 @@ def detect_document_type(document):
         return "Operational Rail"
 
     elif "[T3-Recognition]" in document:
-        return "Recognition Model"
+        return "Recognition"
 
     elif "[T3-PersistentState]" in document:
         return "Persistent State"
