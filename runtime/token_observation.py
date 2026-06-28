@@ -23,7 +23,7 @@ def build_surface_chunks(text):
     if not cleaned_text:
         return []
 
-    separators = ["から", "へ", "に", "で", "を", "が", "は", "と", "の"]
+    separators = ["。", "、", "から", "へ", "に", "で", "を", "が", "は", "と", "の"]
 
     chunks = []
     current = cleaned_text
@@ -36,7 +36,8 @@ def build_surface_chunks(text):
             for index, part in enumerate(parts):
                 if part:
                     rebuilt.append(part)
-                if index < len(parts) - 1:
+
+                if index < len(parts) - 1 and separator not in ["。", "、"]:
                     rebuilt.append(separator)
 
             current = "|".join(rebuilt)
