@@ -24,4 +24,4 @@ Draft/
 
 # Python environment files
 .env
-.env.*
+.env.*.DS_Store
