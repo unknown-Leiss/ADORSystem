@@ -10,6 +10,7 @@ from structural_organization import run_structural_organization
 from meaning_reconstruction import run_meaning_reconstruction
 from meaning_verification import run_meaning_verification
 from meaning_expansion import run_meaning_expansion
+from operational_intent import run_operational_intent
 from scenario_interpretation import build_scenario_interpretation
 from loader import list_character_files, load_document, detect_document_type
 from router import route
@@ -84,6 +85,20 @@ def print_compact_summary(title, data):
         print(f"expanded_mood: {extract_text(data.get('expanded_mood'))}")
         print(f"expanded_context: {extract_text(data.get('expanded_context'))}")
         print(f"ready_for_operational_intent: {data.get('ready_for_operational_intent')}")
+
+    elif title == "Operational Intent":
+        intent_focus = data.get("intent_focus", {})
+        behavior_intent = data.get("behavior_intent", {})
+        presence_intent = data.get("presence_intent", {})
+        context_intent = data.get("context_intent", {})
+        print(f"subject: {intent_focus.get('subject')}")
+        print(f"main_behavior: {intent_focus.get('main_behavior')}")
+        print(f"context_condition: {intent_focus.get('context_condition')}")
+        print(f"body_state: {behavior_intent.get('body_state')}")
+        print(f"presence_direction: {presence_intent.get('presence_direction')}")
+        print(f"presence_intensity: {presence_intent.get('presence_intensity')}")
+        print(f"viewing_condition: {context_intent.get('viewing_condition')}")
+        print(f"ready_for_scenario_interpretation: {data.get('ready_for_scenario_interpretation')}")
 
     elif title == "Scenario Interpretation":
         print(f"interpretation_status: {data.get('interpretation_status')}")
@@ -188,9 +203,14 @@ def load_character_package(character_name):
     )
     print_runtime_output("Meaning Expansion", meaning_expansion)
 
+    operational_intent = run_operational_intent(
+        meaning_expansion,
+    )
+    print_runtime_output("Operational Intent", operational_intent)
+
     interpretation = build_scenario_interpretation(
         understanding,
-        meaning_expansion,
+        operational_intent,
     )
     print_runtime_output("Scenario Interpretation", interpretation)
 
