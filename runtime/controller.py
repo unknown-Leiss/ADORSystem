@@ -40,9 +40,9 @@ if choice == "2":
     print()
     char_choice = input("Select Character > ").strip().translate(str.maketrans("１２３４５６", "123456"))
     if not char_choice.isdigit():
-       print("Invalid Selection")
-       exit()
-    
+        print("Invalid Selection")
+        exit()
+
     index = int(char_choice) - 1
 
     if 0 <= index < len(chars):
@@ -53,6 +53,6 @@ if choice == "2":
 
     else:
         print("Invalid Selection")
-        
+
 else:
     print("Unknown Mode")
