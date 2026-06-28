@@ -1,4 +1,5 @@
 from package_reader import load_character_package
+from recognition_resolution import build_structural_observation
 
 from loader import (
     bootstrap,
@@ -48,8 +49,18 @@ if choice == "2":
     if 0 <= index < len(chars):
         selected = chars[index]
         print(f"Loading: {selected}")
+        runtime_result = load_character_package(selected)
 
-        load_character_package(selected)
+        if isinstance(runtime_result, dict):
+            recognition_resolution = runtime_result.get("recognition_resolution")
+
+            if isinstance(recognition_resolution, dict):
+                structural_observation = build_structural_observation(recognition_resolution)
+                runtime_result["structural_observation"] = structural_observation
+
+                print()
+                print("=== Structural Observation Summary ===")
+                print(structural_observation.get("summary", {}))
 
     else:
         print("Invalid Selection")
