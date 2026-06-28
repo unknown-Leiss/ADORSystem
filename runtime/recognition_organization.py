@@ -1,19 +1,14 @@
+from recognition_engine import run_recognition_engine
+
+
 def build_recognition_organization(surface_organization):
     print()
     print("=== Recognition Organization Runtime ===")
 
-    recognition_candidates = []
-
     organized_chunks = surface_organization.get("organized_chunks", [])
     chunk_relations = surface_organization.get("chunk_relations", [])
 
-    for index, chunk in enumerate(organized_chunks):
-        recognition_candidates.append({
-            "id": index,
-            "candidate": chunk,
-            "status": "candidate",
-            "confidence": "unknown"
-        })
+    recognition_candidates = run_recognition_engine(organized_chunks)
 
     recognition_organization = {
         "surface_organization": surface_organization,

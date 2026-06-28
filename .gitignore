@@ -25,3 +25,4 @@ Draft/
 # Python environment files
 .env
 .env.*.DS_Store
+__pycache__/
