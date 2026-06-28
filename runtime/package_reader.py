@@ -1,4 +1,5 @@
 from character_context import build_character_context
+from source_routing import route_source
 from character_understanding import build_character_understanding
 from meaning_extraction import build_meaning_map
 from token_observation import build_token_observation
@@ -12,6 +13,7 @@ from meaning_verification import run_meaning_verification
 from meaning_expansion import run_meaning_expansion
 from operational_intent import run_operational_intent
 from scenario_interpretation import build_scenario_interpretation
+from artifact_writer import write_runtime_artifacts
 from loader import list_character_files, load_document, detect_document_type
 from router import route
 
@@ -40,6 +42,11 @@ def print_compact_summary(title, data):
         for layer_name, layer_data in data.items():
             if isinstance(layer_data, dict):
                 print(f"- {layer_name}: {layer_data.get('document_title')}")
+
+    elif title == "Source Routing":
+        print(f"priority_order: {data.get('priority_order')}")
+        print(f"routed_sources: {len(data.get('routed_sources', []))}")
+        print(f"missing_sources: {data.get('missing_sources')}")
 
     elif title == "Character Understanding":
         print(f"available_sources: {data.get('available_sources')}")
@@ -104,6 +111,10 @@ def print_compact_summary(title, data):
         print(f"interpretation_status: {data.get('interpretation_status')}")
         print(f"purpose: {data.get('purpose')}")
 
+    elif title == "Runtime Artifacts":
+        for artifact_name, artifact_path in data.items():
+            print(f"{artifact_name}: {artifact_path}")
+
 
 def extract_text(item):
     if isinstance(item, dict):
@@ -151,6 +162,8 @@ def load_character_package(character_name):
 
     context = build_character_context()
     print_runtime_output("Character Context", context)
+    source_routing = route_source(context)
+    print_runtime_output("Source Routing", source_routing)
 
     meaning_map = build_meaning_map(context)
     print_runtime_output("Meaning Map", meaning_map)
@@ -213,6 +226,12 @@ def load_character_package(character_name):
         operational_intent,
     )
     print_runtime_output("Scenario Interpretation", interpretation)
+
+    artifact_paths = write_runtime_artifacts(
+        operational_intent=operational_intent,
+        scenario_interpretation=interpretation,
+    )
+    print_runtime_output("Runtime Artifacts", artifact_paths)
 
     print()
     print("=== Character Package Loaded ===")
