@@ -1,0 +1,937 @@
+{
+  "artifact_name": "scenario_interpretation.json",
+  "created_at": "2026-06-28T16:05:54",
+  "artifact_status": "provisional",
+  "data": {
+    "character_understanding": {
+      "identity_source": {
+        "source": {
+          "document_title": "[T3-Character] Leiss Character Core v2.1",
+          "character_name": "Leiss",
+          "document_type": "Character Core",
+          "document_role": "Identity Source"
+        },
+        "meaning_status": "provisional"
+      },
+      "behavior_source": {
+        "source": {
+          "document_title": "[T3-Rail] Leiss Operational Rail Package vNext",
+          "character_name": "Leiss",
+          "document_type": "Operational Rail",
+          "document_role": "Character Reconstruction Support Layer"
+        },
+        "meaning_status": "provisional"
+      },
+      "recognition_source": {
+        "source": {
+          "document_title": "[T3-Recognition] Leiss Recognition Model v1.0",
+          "character_name": "Leiss",
+          "document_type": "Recognition Model",
+          "document_role": "Recognition Anchor Source"
+        },
+        "meaning_status": "provisional"
+      },
+      "verification_source": {
+        "source": {
+          "document_title": "[T2-Verification] Leiss Verification Specification v1.0",
+          "character_name": "Leiss",
+          "document_type": "Verification Specification",
+          "document_role": "Identity Continuity Verification Source"
+        },
+        "meaning_status": "provisional"
+      },
+      "reconstruction_source": {
+        "source": {
+          "document_title": "[T2-Reconstruction] Leiss Reconstruction Procedure v1.0",
+          "character_name": "Leiss",
+          "document_type": "Reconstruction Procedure",
+          "document_role": "Operational Reconstruction Procedure"
+        },
+        "meaning_status": "provisional"
+      },
+      "available_sources": [
+        "identity",
+        "behavior",
+        "recognition",
+        "verification",
+        "reconstruction"
+      ],
+      "missing_sources": [],
+      "ready_for_scenario": true,
+      "understanding_status": "provisional",
+      "purpose": "Prepare AI recognition state before scenario interpretation"
+    },
+    "scenario": {
+      "meaning_expansion": {
+        "verified_meaning": {
+          "meaning": {
+            "structural_organization": {
+              "structural_observation": {
+                "character_understanding": {
+                  "identity_source": {
+                    "source": {
+                      "document_title": "[T3-Character] Leiss Character Core v2.1",
+                      "character_name": "Leiss",
+                      "document_type": "Character Core",
+                      "document_role": "Identity Source"
+                    },
+                    "meaning_status": "provisional"
+                  },
+                  "behavior_source": {
+                    "source": {
+                      "document_title": "[T3-Rail] Leiss Operational Rail Package vNext",
+                      "character_name": "Leiss",
+                      "document_type": "Operational Rail",
+                      "document_role": "Character Reconstruction Support Layer"
+                    },
+                    "meaning_status": "provisional"
+                  },
+                  "recognition_source": {
+                    "source": {
+                      "document_title": "[T3-Recognition] Leiss Recognition Model v1.0",
+                      "character_name": "Leiss",
+                      "document_type": "Recognition Model",
+                      "document_role": "Recognition Anchor Source"
+                    },
+                    "meaning_status": "provisional"
+                  },
+                  "verification_source": {
+                    "source": {
+                      "document_title": "[T2-Verification] Leiss Verification Specification v1.0",
+                      "character_name": "Leiss",
+                      "document_type": "Verification Specification",
+                      "document_role": "Identity Continuity Verification Source"
+                    },
+                    "meaning_status": "provisional"
+                  },
+                  "reconstruction_source": {
+                    "source": {
+                      "document_title": "[T2-Reconstruction] Leiss Reconstruction Procedure v1.0",
+                      "character_name": "Leiss",
+                      "document_type": "Reconstruction Procedure",
+                      "document_role": "Operational Reconstruction Procedure"
+                    },
+                    "meaning_status": "provisional"
+                  },
+                  "available_sources": [
+                    "identity",
+                    "behavior",
+                    "recognition",
+                    "verification",
+                    "reconstruction"
+                  ],
+                  "missing_sources": [],
+                  "ready_for_scenario": true,
+                  "understanding_status": "provisional",
+                  "purpose": "Prepare AI recognition state before scenario interpretation"
+                },
+                "recognition_organization": {
+                  "accepted": [
+                    {
+                      "candidate": {
+                        "text": "Leiss",
+                        "type": "entity",
+                        "entity_hint": "character"
+                      },
+                      "source_chunks": [
+                        0
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 1
+                    },
+                    {
+                      "candidate": {
+                        "text": "山頂",
+                        "type": "structure",
+                        "structure_hint": "location_context"
+                      },
+                      "source_chunks": [
+                        2
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 3
+                    },
+                    {
+                      "candidate": {
+                        "text": "神社",
+                        "type": "entity",
+                        "entity_hint": "place"
+                      },
+                      "source_chunks": [
+                        4
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 5
+                    },
+                    {
+                      "candidate": {
+                        "text": "谷",
+                        "type": "entity",
+                        "entity_hint": "place"
+                      },
+                      "source_chunks": [
+                        6
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 7
+                    },
+                    {
+                      "candidate": {
+                        "text": "見下ろしている",
+                        "type": "action",
+                        "action_hint": "見下ろしている"
+                      },
+                      "source_chunks": [
+                        10
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 11
+                    },
+                    {
+                      "candidate": {
+                        "text": "静か",
+                        "type": "attribute",
+                        "attribute_hint": "静か"
+                      },
+                      "source_chunks": [
+                        8
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 9
+                    },
+                    {
+                      "candidate": {
+                        "text": "の",
+                        "type": "relation",
+                        "relation_hint": "modifier"
+                      },
+                      "source_chunks": [
+                        3
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 4
+                    },
+                    {
+                      "candidate": {
+                        "text": "から",
+                        "type": "relation",
+                        "relation_hint": "origin"
+                      },
+                      "source_chunks": [
+                        5
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 6
+                    },
+                    {
+                      "candidate": {
+                        "text": "を",
+                        "type": "relation",
+                        "relation_hint": "object"
+                      },
+                      "source_chunks": [
+                        7
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 8
+                    },
+                    {
+                      "candidate": {
+                        "text": "に",
+                        "type": "relation",
+                        "relation_hint": "location_or_target"
+                      },
+                      "source_chunks": [
+                        9
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 10
+                    }
+                  ],
+                  "held": [
+                    {
+                      "candidate": {
+                        "text": "山頂の神社",
+                        "type": "unknown",
+                        "relation_hint": "modifier"
+                      },
+                      "source_chunks": [
+                        2,
+                        3,
+                        4
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 5
+                    },
+                    {
+                      "candidate": {
+                        "text": "谷を静か",
+                        "type": "unknown",
+                        "relation_hint": "object"
+                      },
+                      "source_chunks": [
+                        6,
+                        7,
+                        8
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 9
+                    },
+                    {
+                      "candidate": {
+                        "text": "Leissは",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        0,
+                        1
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 2
+                    },
+                    {
+                      "candidate": {
+                        "text": "は山頂",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        1,
+                        2
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 3
+                    },
+                    {
+                      "candidate": {
+                        "text": "山頂の",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        2,
+                        3
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 4
+                    },
+                    {
+                      "candidate": {
+                        "text": "の神社",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        3,
+                        4
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 5
+                    },
+                    {
+                      "candidate": {
+                        "text": "神社から",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        4,
+                        5
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 6
+                    },
+                    {
+                      "candidate": {
+                        "text": "から谷",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        5,
+                        6
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 7
+                    },
+                    {
+                      "candidate": {
+                        "text": "谷を",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        6,
+                        7
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 8
+                    },
+                    {
+                      "candidate": {
+                        "text": "を静か",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        7,
+                        8
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 9
+                    },
+                    {
+                      "candidate": {
+                        "text": "静かに",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        8,
+                        9
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 10
+                    },
+                    {
+                      "candidate": {
+                        "text": "に見下ろしている",
+                        "type": "compound"
+                      },
+                      "source_chunks": [
+                        9,
+                        10
+                      ],
+                      "status": "candidate",
+                      "confidence": "low",
+                      "next_index": 11
+                    },
+                    {
+                      "candidate": {
+                        "text": "見下ろしている",
+                        "type": "relation",
+                        "relation_hint": "below"
+                      },
+                      "source_chunks": [
+                        10
+                      ],
+                      "status": "candidate",
+                      "confidence": "medium",
+                      "next_index": 11
+                    }
+                  ],
+                  "rejected": [],
+                  "resolution_status": "provisional",
+                  "purpose": "Resolve recognition candidates before structural observation"
+                },
+                "entities": [
+                  {
+                    "text": "Leiss",
+                    "type": "entity",
+                    "kind": "character",
+                    "source_chunks": [
+                      0
+                    ],
+                    "confidence": "medium"
+                  },
+                  {
+                    "text": "神社",
+                    "type": "entity",
+                    "kind": "place",
+                    "source_chunks": [
+                      4
+                    ],
+                    "confidence": "medium"
+                  },
+                  {
+                    "text": "谷",
+                    "type": "entity",
+                    "kind": "place",
+                    "source_chunks": [
+                      6
+                    ],
+                    "confidence": "medium"
+                  }
+                ],
+                "relations": [
+                  {
+                    "text": "の",
+                    "type": "relation",
+                    "kind": "modifier",
+                    "source_chunks": [
+                      3
+                    ],
+                    "confidence": "medium"
+                  },
+                  {
+                    "text": "から",
+                    "type": "relation",
+                    "kind": "origin",
+                    "source_chunks": [
+                      5
+                    ],
+                    "confidence": "medium"
+                  },
+                  {
+                    "text": "を",
+                    "type": "relation",
+                    "kind": "object",
+                    "source_chunks": [
+                      7
+                    ],
+                    "confidence": "medium"
+                  },
+                  {
+                    "text": "に",
+                    "type": "relation",
+                    "kind": "location_or_target",
+                    "source_chunks": [
+                      9
+                    ],
+                    "confidence": "medium"
+                  }
+                ],
+                "actions": [
+                  {
+                    "text": "見下ろしている",
+                    "type": "action",
+                    "kind": "見下ろしている",
+                    "source_chunks": [
+                      10
+                    ],
+                    "confidence": "medium"
+                  }
+                ],
+                "attributes": [
+                  {
+                    "text": "静か",
+                    "type": "attribute",
+                    "kind": "静か",
+                    "source_chunks": [
+                      8
+                    ],
+                    "confidence": "medium"
+                  }
+                ],
+                "structures": [
+                  {
+                    "text": "山頂",
+                    "type": "structure",
+                    "kind": "location_context",
+                    "source_chunks": [
+                      2
+                    ],
+                    "confidence": "medium"
+                  }
+                ],
+                "observation_order": [],
+                "raw_structure": [],
+                "observation_status": "provisional",
+                "purpose": "Build observable structures from recognition candidates"
+              },
+              "spatial_structure": [
+                {
+                  "text": "の",
+                  "type": "relation",
+                  "kind": "modifier",
+                  "source_chunks": [
+                    3
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "から",
+                  "type": "relation",
+                  "kind": "origin",
+                  "source_chunks": [
+                    5
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "を",
+                  "type": "relation",
+                  "kind": "object",
+                  "source_chunks": [
+                    7
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "に",
+                  "type": "relation",
+                  "kind": "location_or_target",
+                  "source_chunks": [
+                    9
+                  ],
+                  "confidence": "medium"
+                }
+              ],
+              "behavior_structure": {
+                "actions": [
+                  {
+                    "text": "見下ろしている",
+                    "type": "action",
+                    "kind": "見下ろしている",
+                    "source_chunks": [
+                      10
+                    ],
+                    "confidence": "medium"
+                  }
+                ],
+                "attributes": [
+                  {
+                    "text": "静か",
+                    "type": "attribute",
+                    "kind": "静か",
+                    "source_chunks": [
+                      8
+                    ],
+                    "confidence": "medium"
+                  }
+                ]
+              },
+              "existence_structure": [
+                {
+                  "text": "Leiss",
+                  "type": "entity",
+                  "kind": "character",
+                  "source_chunks": [
+                    0
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "神社",
+                  "type": "entity",
+                  "kind": "place",
+                  "source_chunks": [
+                    4
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "谷",
+                  "type": "entity",
+                  "kind": "place",
+                  "source_chunks": [
+                    6
+                  ],
+                  "confidence": "medium"
+                }
+              ],
+              "context_structure": [
+                {
+                  "text": "山頂",
+                  "type": "structure",
+                  "kind": "location_context",
+                  "source_chunks": [
+                    2
+                  ],
+                  "confidence": "medium"
+                }
+              ],
+              "observation_structure": [],
+              "organization_status": "provisional",
+              "purpose": "Organize observable structures before Meaning Reconstruction"
+            },
+            "existence_meaning": {
+              "entities": [
+                {
+                  "text": "Leiss",
+                  "type": "entity",
+                  "kind": "character",
+                  "source_chunks": [
+                    0
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "神社",
+                  "type": "entity",
+                  "kind": "place",
+                  "source_chunks": [
+                    4
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "谷",
+                  "type": "entity",
+                  "kind": "place",
+                  "source_chunks": [
+                    6
+                  ],
+                  "confidence": "medium"
+                }
+              ],
+              "purpose": "Identify who or what exists in the scenario"
+            },
+            "behavior_meaning": {
+              "actions": [
+                {
+                  "text": "見下ろしている",
+                  "type": "action",
+                  "kind": "見下ろしている",
+                  "source_chunks": [
+                    10
+                  ],
+                  "confidence": "medium"
+                }
+              ],
+              "attributes": [
+                {
+                  "text": "静か",
+                  "type": "attribute",
+                  "kind": "静か",
+                  "source_chunks": [
+                    8
+                  ],
+                  "confidence": "medium"
+                }
+              ],
+              "purpose": "Identify what is happening and how it is performed"
+            },
+            "context_meaning": {
+              "structures": [
+                {
+                  "text": "山頂",
+                  "type": "structure",
+                  "kind": "location_context",
+                  "source_chunks": [
+                    2
+                  ],
+                  "confidence": "medium"
+                }
+              ],
+              "spatial_relations": [
+                {
+                  "text": "の",
+                  "type": "relation",
+                  "kind": "modifier",
+                  "source_chunks": [
+                    3
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "から",
+                  "type": "relation",
+                  "kind": "origin",
+                  "source_chunks": [
+                    5
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "を",
+                  "type": "relation",
+                  "kind": "object",
+                  "source_chunks": [
+                    7
+                  ],
+                  "confidence": "medium"
+                },
+                {
+                  "text": "に",
+                  "type": "relation",
+                  "kind": "location_or_target",
+                  "source_chunks": [
+                    9
+                  ],
+                  "confidence": "medium"
+                }
+              ],
+              "purpose": "Identify where the scenario is grounded and how elements relate spatially"
+            },
+            "scene_meaning": {
+              "subject": {
+                "text": "Leiss",
+                "type": "entity",
+                "kind": "character",
+                "source_chunks": [
+                  0
+                ],
+                "confidence": "medium"
+              },
+              "main_action": {
+                "text": "見下ろしている",
+                "type": "action",
+                "kind": "見下ろしている",
+                "source_chunks": [
+                  10
+                ],
+                "confidence": "medium"
+              },
+              "mood": {
+                "text": "静か",
+                "type": "attribute",
+                "kind": "静か",
+                "source_chunks": [
+                  8
+                ],
+                "confidence": "medium"
+              },
+              "context": {
+                "text": "山頂",
+                "type": "structure",
+                "kind": "location_context",
+                "source_chunks": [
+                  2
+                ],
+                "confidence": "medium"
+              }
+            },
+            "meaning_status": "provisional",
+            "purpose": "Reconstruct meaning from organized structures before Scenario Interpretation"
+          },
+          "verification_status": "provisional",
+          "ready_for_expansion": true,
+          "purpose": "Verify reconstructed meaning before expansion"
+        },
+        "expanded_subject": {
+          "source": {
+            "text": "Leiss",
+            "type": "entity",
+            "kind": "character",
+            "source_chunks": [
+              0
+            ],
+            "confidence": "medium"
+          },
+          "text": "Leiss",
+          "identity_relation": "scenario_subject",
+          "semantic_role": "existence_anchor",
+          "identity_source_link": "Character Understanding identity_source",
+          "presence_direction": "quiet_existing_person"
+        },
+        "expanded_action": {
+          "source": {
+            "text": "見下ろしている",
+            "type": "action",
+            "kind": "見下ろしている",
+            "source_chunks": [
+              10
+            ],
+            "confidence": "medium"
+          },
+          "text": "見下ろしている",
+          "behavior_role": "main_behavior",
+          "operational_notes": [
+            "prioritize observation over performance",
+            "keep the body calm and non-dramatic",
+            "treat the viewed space as important context"
+          ],
+          "behavior_interpretation": "observational_gaze",
+          "gaze_structure": "downward_view_toward_target_space",
+          "body_state": "mostly_still"
+        },
+        "expanded_mood": {
+          "source": {
+            "text": "静か",
+            "type": "attribute",
+            "kind": "静か",
+            "source_chunks": [
+              8
+            ],
+            "confidence": "medium"
+          },
+          "text": "静か",
+          "mood_role": "behavior_modifier",
+          "presence_notes": [
+            "avoid exaggerated emotion",
+            "avoid performance-like posing",
+            "favor restrained presence"
+          ],
+          "emotional_tone": "calm",
+          "presence_intensity": "low"
+        },
+        "expanded_context": {
+          "source": {
+            "text": "山頂",
+            "type": "structure",
+            "kind": "location_context",
+            "source_chunks": [
+              2
+            ],
+            "confidence": "medium"
+          },
+          "text": "山頂",
+          "context_role": "scene_grounding",
+          "context_notes": [
+            "treat the location as elevated",
+            "support a downward viewing structure",
+            "allow the environment to dominate the scene"
+          ],
+          "spatial_meaning": "high_place",
+          "viewing_condition": "wide_view_from_above"
+        },
+        "expansion_status": "provisional",
+        "ready_for_operational_intent": true,
+        "purpose": "Expand verified meaning before Operational Intent Runtime"
+      },
+      "intent_focus": {
+        "subject": "Leiss",
+        "main_behavior": "observational_gaze",
+        "context_condition": "high_place",
+        "priority": [
+          "preserve identity source",
+          "prioritize observation",
+          "support quiet presence",
+          "keep environment meaningful"
+        ]
+      },
+      "behavior_intent": {
+        "behavior_role": "main_behavior",
+        "behavior_interpretation": "observational_gaze",
+        "gaze_structure": "downward_view_toward_target_space",
+        "body_state": "mostly_still",
+        "operational_notes": [
+          "prioritize observation over performance",
+          "keep the body calm and non-dramatic",
+          "treat the viewed space as important context"
+        ]
+      },
+      "presence_intent": {
+        "identity_relation": "scenario_subject",
+        "semantic_role": "existence_anchor",
+        "presence_direction": "quiet_existing_person",
+        "emotional_tone": "calm",
+        "presence_intensity": "low",
+        "presence_notes": [
+          "avoid exaggerated emotion",
+          "avoid performance-like posing",
+          "favor restrained presence"
+        ]
+      },
+      "context_intent": {
+        "context_role": "scene_grounding",
+        "spatial_meaning": "high_place",
+        "viewing_condition": "wide_view_from_above",
+        "context_notes": [
+          "treat the location as elevated",
+          "support a downward viewing structure",
+          "allow the environment to dominate the scene"
+        ]
+      },
+      "intent_status": "provisional",
+      "ready_for_scenario_interpretation": true,
+      "purpose": "Convert expanded meaning into operational intent before Scenario Interpretation"
+    },
+    "interpretation_status": "provisional",
+    "purpose": "Interpret scenario meaning before prompt reconstruction"
+  }
+}
