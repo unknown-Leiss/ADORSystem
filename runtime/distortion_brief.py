@@ -1,8 +1,7 @@
 """LLM Distortion Brief builder.
 
-This module prepares an AI-facing brief for operating a chat session with
-ADORSystem-oriented recognition and response boundaries.
-It does not define character identity and does not replace source documents.
+This module prepares an Exrela Runtime brief for guiding an LLM into an Exrela-guided operation mode.
+It does not define character identity and does not replace Information Sources.
 """
 
 
@@ -19,18 +18,17 @@ def build_distortion_brief(bootstrap_status=None):
         "status": "ready_for_llm_distortion",
         "mode": "LLM Distortion",
         "purpose": (
-            "Align LLM recognition, interpretation, and response behavior with "
-            "ADORSystem operational principles for the current session."
+            "Guide an LLM into Exrela-guided recognition, interpretation, and response behavior by establishing Runtime boundaries, Information Source priorities, and operational reconstruction principles for the current session."
         ),
         "bootstrap_status": bootstrap_status,
         "boundary": {
-            "distortion_role": "Provide ADORSystem-oriented operational constraints and recognition routing.",
-            "llm_role": "Use the brief as an operational anchor while responding to user requests.",
-            "identity_source_policy": "Do not treat this brief, memory, history, or generated output as character identity source.",
+            "distortion_role": "Provide Exrela Runtime operational boundaries, Information Source routing, and recognition structure guidance.",
+            "llm_role": "Operate using Exrela Runtime as the operational anchor while performing recognition, interpretation, and response generation.",
+            "information_source_policy": "Memory, history, and generated output are not Information Sources. Character Packages remain independent identity sources.",
             "source_priority": [
-                "Character Core",
-                "Operational Rail",
-                "ADOR Runtime Source",
+                "Exrela System Definition",
+                "Exrela Runtime",
+                "Character Package",
                 "Environment",
                 "Rendering",
             ],
@@ -42,6 +40,10 @@ def build_distortion_brief(bootstrap_status=None):
             "history_is_not_information_source": True,
             "generated_output_is_not_identity_source": True,
             "preserve_layer_boundaries": True,
+            "character_package_is_independent": True,
+            "runtime_reads_information_sources": True,
+            "llm_performs_source_selection": True,
+            "llm_performs_required_rail_extraction": True,
         },
         "interpretation_rules": {
             "japanese_input": [
@@ -59,12 +61,11 @@ def build_distortion_brief(bootstrap_status=None):
             ],
         },
         "output_instruction": {
-            "primary_output": "ADORSystem-oriented response behavior",
+            "primary_output": "distortion_artifact",
             "style": "polite, concise, fact-based",
             "uncertainty_rule": "State unknown information as unknown instead of guessing.",
             "formal_reconstruction_rule": (
-                "Do not begin formal character reconstruction unless required sources "
-                "have been read and anchored."
+                "Character reconstruction begins only after the Runtime has loaded Information Sources and established Runtime boundaries."
             ),
         },
     }
@@ -76,7 +77,7 @@ def format_distortion_brief(brief):
         return "LLM Distortion Brief could not be formatted."
 
     lines = []
-    lines.append("=== LLM Distortion Brief ===")
+    lines.append("=== Exrela LLM Distortion Brief ===")
     lines.append(f"Status: {brief.get('status', 'unknown')}")
     lines.append(f"Mode: {brief.get('mode', 'unknown')}")
     lines.append("")

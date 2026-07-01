@@ -1,7 +1,7 @@
 """Reconstruction Brief builder.
 
-This module does not interpret scenario meaning by itself.
-It organizes runtime reconstruction outputs into a stable brief that an LLM can read.
+This module does not interpret scenario meaning or select package information by itself.
+It organizes Exrela Runtime reconstruction outputs into a stable full brief that an Exrela-guided LLM can read.
 """
 
 
@@ -14,8 +14,8 @@ def _safe_get(mapping, key, default=None):
 def build_reconstruction_brief(runtime_result):
     """Build an AI-facing Reconstruction Brief from package_reader runtime output.
 
-    The brief is intended to be passed to an LLM after ADOR Runtime has loaded
-    the Character Package and prepared intermediate reconstruction structures.
+    The brief is intended to be passed to an Exrela-guided LLM after Exrela Runtime
+    has loaded the Character Package and prepared intermediate reconstruction structures.
     """
     if not isinstance(runtime_result, dict):
         return {
@@ -37,20 +37,22 @@ def build_reconstruction_brief(runtime_result):
     recognition_resolution = _safe_get(runtime_result, "recognition_resolution", {})
 
     brief = {
-        "status": "ready_for_llm_reconstruction",
+        "status": "ready_for_exrela_guided_reconstruction",
         "mode": "Reconstruction",
         "character": character,
         "purpose": (
-            "Use the ADOR reconstruction outputs and the scenario to select the "
-            "necessary Character Package information and generate a reconstruction "
-            "prompt artifact."
+            "Provide the loaded Character Package, Exrela Runtime outputs, and user scenario "
+            "to an Exrela-guided LLM so it can perform scenario-based source selection, "
+            "required rail extraction, and reconstruction prompt artifact generation."
         ),
         "boundary": {
-            "runtime_role": "Load Character Package sources and organize reconstruction structures.",
-            "llm_role": "Use the user-provided scenario as an input while performing meaning interpretation and Character Package selection.",
+            "runtime_role": "Load Character Package sources and organize reconstruction structures without deciding final scenario-based source selection.",
+            "llm_role": "Use the user-provided scenario and full package/runtime inputs to perform meaning interpretation, Character Package selection, required rail extraction, and prompt reconstruction.",
             "runtime_interpretation_status": "provisional",
             "prefer_original_scenario": True,
             "do_not_treat_runtime_as_identity_source": True,
+            "package_information_policy": "full_package_context_allowed",
+            "source_selection_owner": "exrela_guided_llm",
         },
         "scenario": scenario,
         "scenario_source": {
@@ -68,7 +70,7 @@ def build_reconstruction_brief(runtime_result):
             "scenario_interpretation": scenario_interpretation,
         },
         "output_instruction": {
-            "primary_output": "reconstruction_prompt_artifact",
+            "primary_output": "image_prompt_artifact",
             "required_layers": [
                 "Character Core",
                 "Meaning",
@@ -79,7 +81,8 @@ def build_reconstruction_brief(runtime_result):
                 "Negative Constraints",
             ],
             "selection_rule": (
-                "Select only the Character Package information necessary for the scenario, "
+                "Use the full Character Package context as available input. "
+                "Select scenario-relevant information during Exrela-guided reconstruction, "
                 "while preserving identity continuity and recognition continuity."
             ),
         },

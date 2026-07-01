@@ -16,12 +16,12 @@ def bootstrap():
 
     targets = {
         "T0_Index": root / "T0_Index",
-        "T1_Core": root / "T1_Core",
+        "T1_Definition": root / "T1_Definition",
         "T2_Runtime": root / "T2_Runtime",
-        "T3_Dossiers": root / "T3_Dossiers",
+        "T3_Recognition": root / "T3_Recognition",
     }
 
-    print("\n=== ADOR Bootstrap Status ===")
+    print("\n=== Exrela Bootstrap Status ===")
 
     for name, path in targets.items():
         if path.exists():
@@ -44,7 +44,7 @@ def bootstrap():
     print("============================")
 
 def list_characters():
-    root = Path.cwd() / "T3_Dossiers"
+    root = Path.cwd() / "T3_Recognition"
 
     if not root.exists():
         return []
@@ -56,7 +56,7 @@ def list_characters():
     ])
 
 def list_character_files(character):
-    root = Path.cwd() / "T3_Dossiers" / character
+    root = Path.cwd() / "T3_Recognition" / character
 
     if not root.exists():
         return []
@@ -69,7 +69,7 @@ def list_character_files(character):
 def load_document(character, document):
     from pathlib import Path
 
-    path = Path.cwd() / "T3_Dossiers" / character / document
+    path = Path.cwd() / "T3_Recognition" / character / document
 
     if path.exists():
         return path.read_text(encoding="utf-8")
@@ -91,6 +91,15 @@ def detect_document_type(document):
 
     elif "[T3-PhysicalSpecification]" in document:
         return "Physical Specification"
+
+    elif "[T3-Projection]" in document:
+        return "Projection Form"
+
+    elif "[T3-Archive]" in document:
+        return "Drift Archive"
+
+    elif "[T0-PackageIndex]" in document or "Package Index" in document:
+        return "Package Index"
 
     elif "[T2-Reconstruction]" in document:
         return "Reconstruction Procedure"

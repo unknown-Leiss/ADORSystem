@@ -1,9 +1,27 @@
 runtime_state = {
     "identity": {},
+    "persistent_state": {},
+    "physical": {},
     "behavior": {},
     "recognition": {},
     "verification": {},
-    "reconstruction": {}
+    "reconstruction": {},
+    "projection": {},
+    "archive": {},
+    "package_index": {},
+}
+
+layer_capabilities = {
+    "identity": "Identity Source",
+    "persistent_state": "Identity Persistence Source",
+    "physical": "Physical Anchor Source",
+    "behavior": "Character Reconstruction Support Layer",
+    "recognition": "Recognition Anchor Source",
+    "verification": "Identity Continuity Verification Source",
+    "reconstruction": "Operational Reconstruction Procedure",
+    "projection": "Projection Form Source",
+    "archive": "Research / Drift Archive Source",
+    "package_index": "Package Index Source",
 }
 
 
@@ -33,6 +51,10 @@ def apply_layer(content, layer_name):
     Document RoleをRuntime Stateへ登録する。
     """
     global runtime_state
+
+    if layer_name not in runtime_state:
+        runtime_state[layer_name] = {}
+        layer_capabilities[layer_name] = "Additional Package Source"
 
     lines = content.splitlines()
 
@@ -88,6 +110,19 @@ def show_runtime_state():
         print(f"  Document Type: {layer_data['document_type']}")
         print(f"  Document Role: {layer_data['document_role']}")
         print()
+
+    show_package_capability()
+
+
+def show_package_capability():
+    print()
+    print("=== Package Capability ===")
+    print("--------------------------")
+
+    for layer_name, capability in layer_capabilities.items():
+        layer_data = runtime_state.get(layer_name)
+        marker = "✓" if layer_data else "-"
+        print(f"{marker} {layer_name}: {capability}")
 
 def check_required_layers(required_layers):
     print()
