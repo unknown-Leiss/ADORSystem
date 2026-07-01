@@ -1,0 +1,379 @@
+
+
+# ADOR Platform Architecture
+# ADOR プラットフォーム設計
+
+Status: Draft v0.1
+
+---
+
+## Purpose
+## 目的
+
+This document defines the top-level architecture of the ADOR platform.
+
+この文書はADORプラットフォームの最上位構造を定義する。
+
+It separates knowledge assets, local system operation, runtime implementation, and AI execution.
+
+知識資産・ローカルシステム運用・Runtime実装・AI実行を分離する。
+
+---
+
+## Core Principle
+## 基本原則
+
+ADORSystem is AI-agnostic.
+
+ADORSystemは特定のAIに依存しない。
+
+ADORLibrary is the knowledge asset.
+
+
+ADORLibraryは知識資産である。
+
+ADORLibrary is storage-independent.
+
+ADORLibraryは保存場所に依存しない。
+
+Google Drive, Mac local storage, SSD, or future repositories may host ADORLibrary assets.
+
+Google Drive・Macローカル・SSD・将来のRepositoryは、ADORLibrary資産を保持する実装先である。
+
+ADORSystem consumes ADORLibrary to design, implement, verify, and operate Runtime.
+
+ADORSystemはADORLibraryを利用してRuntimeを設計・実装・検証・運用する。
+
+AI is an execution and reasoning engine, not the owner of ADOR knowledge assets.
+
+AIは実行・推論エンジンであり、ADOR知識資産の所有者ではない。
+
+---
+
+## Platform Layers
+## プラットフォーム層
+
+```text
+ADOR Platform
+├── ADORLibrary
+│   ├── Local Library
+│   │   ├── Mac
+│   │   └── SSD / future portable storage
+│   └── Drive Library
+│       └── iPhone / Source Session
+├── Local ADORSystem
+├── ADORRuntime
+├── AI Adapter
+└── Executor
+```
+
+---
+
+## 1. ADORLibrary
+## 1. ADORLibrary
+
+### Role
+### 役割
+
+ADORLibrary is the canonical knowledge asset layer.
+
+ADORLibrary is not defined by its storage location.
+
+ADORLibraryは正規知識資産層である。
+
+ADORLibraryは保存場所によって定義されない。
+
+### Location
+### 配置
+
+- Local Library: Mac / SSD / future portable storage
+- Drive Library: Google Drive for iPhone Source Session and cross-device research
+
+- Local Library：Mac / SSD / 将来の可搬ストレージ
+- Drive Library：iPhone Source Sessionおよび複数端末研究用のGoogle Drive
+
+### Contains
+### 含むもの
+
+- T0_Index
+- T1_Core
+- T2_Runtime
+- T3_Dossiers
+- T4_ResearchArchive
+- Draft Google Docs
+- Markdown sources
+- Released PDFs
+
+### Must
+### やること
+
+- Preserve authoritative research assets.
+- Support human editing and cross-device access.
+- Maintain source classification.
+- Allow storage provider replacement without changing ADORLibrary identity.
+
+- 正規研究資産を保持する。
+- 人間による編集と複数端末アクセスを支援する。
+- 情報源分類を維持する。
+- 保存先を変更してもADORLibraryの同一性を維持する。
+
+### Must Not
+### やらないこと
+
+- Do not function as the primary implementation workspace.
+- Do not mix runtime implementation with source assets without classification.
+
+- 主実装ワークスペースとして扱わない。
+- Runtime実装を分類なしに情報源資産へ混在させない。
+
+---
+
+## 2. Local ADORSystem
+## 2. Local ADORSystem
+
+### Role
+### 役割
+
+Local ADORSystem is the local-first research, development, verification, and runtime construction environment.
+
+The Mac ADOR project is local-based and should operate without requiring Google Drive availability.
+
+Local ADORSystemはローカル優先の研究・開発・検証・Runtime構築環境である。
+
+Mac版ADOR Projectはローカルベースであり、Google Driveの可用性に依存しない。
+
+### Location
+### 配置
+
+- Mac
+- SSD / future portable local environment
+
+- Mac
+- SSD / 将来の可搬ローカル環境
+
+### Contains
+### 含むもの
+
+- source_library
+- docs
+- character_packages
+- runtime
+- scripts
+- tests
+- logs
+- Git repository
+
+### Must
+### やること
+
+- Use local source_library as the runtime-facing source base.
+- Allow replacement from Mac local storage to SSD without architecture changes.
+- Convert source understanding into development specifications.
+- Implement Runtime based on specifications.
+- Support local AI and cloud AI workflows.
+
+- runtimeが参照する情報源基盤としてlocal source_libraryを使用する。
+- MacローカルからSSDへ変更してもアーキテクチャを変更しない。
+- 情報源理解を開発仕様へ変換する。
+- 仕様に基づいてRuntimeを実装する。
+- ローカルAIとクラウドAIの両方の運用を支援する。
+
+### Must Not
+### やらないこと
+
+- Do not require Google Drive during local Runtime execution.
+- Do not confuse Drive Library with Local Library responsibility.
+- Do not let implementation overwrite source definitions.
+
+- ローカルRuntime実行時にGoogle Driveを必須条件にしない。
+- Drive LibraryとLocal Libraryの責務を混同しない。
+- 実装によって情報源定義を上書きしない。
+
+---
+
+## 3. ADORRuntime
+## 3. ADORRuntime
+
+### Role
+### 役割
+
+ADORRuntime performs source-aware reconstruction and prepares AI-facing runtime state.
+
+ADORRuntimeは情報源に基づく再構築を行い、AIへ渡すRuntime Stateを構築する。
+
+### Responsibility
+### 責務
+
+- Source Routing
+- Runtime Bootstrap
+- Runtime Re-anchor
+- Character Understanding
+- Scenario Interpretation
+- Meaning Reconstruction
+- Recognition Organization
+- Prompt Reconstruction support
+
+### Must Not
+### やらないこと
+
+- Do not own the knowledge assets.
+- Do not replace Character Core.
+- Do not execute image generation directly unless acting through an Executor boundary.
+
+- 知識資産を所有しない。
+- Character Coreを置換しない。
+- Executor境界を通さず画像生成を直接実行しない。
+
+---
+
+## 4. AI Adapter
+## 4. AI Adapter
+
+### Role
+### 役割
+
+AI Adapter connects ADORSystem to different reasoning engines.
+
+AI AdapterはADORSystemを異なる推論エンジンへ接続する。
+
+### Supported Targets
+### 対象
+
+- ChatGPT
+- Local LLM
+- Future AI implementations
+
+### Must
+### やること
+
+- Preserve the same ADORSystem workflow regardless of AI engine.
+- Translate Runtime State into the input form required by each AI.
+
+- AIエンジンが変わっても同じADORSystemワークフローを維持する。
+- Runtime Stateを各AIが必要とする入力形式へ変換する。
+
+### Must Not
+### やらないこと
+
+- Do not allow AI-specific behavior to redefine ADORLibrary or ADORRuntime.
+
+- AI固有の挙動によってADORLibraryやADORRuntimeを再定義してはならない。
+
+---
+
+## 5. Executor
+## 5. Executor
+
+### Role
+### 役割
+
+Executor performs the final execution task after Runtime preparation.
+
+ExecutorはRuntime準備後の最終実行を担当する。
+
+### Examples
+### 例
+
+- Image generation
+- Prompt artifact execution
+- Output monitoring
+- Drift / overwrite / collapse inspection
+
+### Must Not
+### やらないこと
+
+- Do not perform Source Read.
+- Do not perform Runtime Bootstrap.
+- Do not define Character Identity.
+
+- Source Readを行わない。
+- Runtime Bootstrapを行わない。
+- Character Identityを定義しない。
+
+---
+
+## Platform Flow
+## プラットフォームフロー
+
+```text
+ADORLibrary
+        ↓
+Source Provider
+        ↓
+Local ADORSystem
+        ↓
+ADORRuntime
+        ↓
+AI Adapter
+        ↓
+AI Engine
+        ↓
+Executor
+        ↓
+Output / Verification
+```
+
+### Project Variants
+### プロジェクト派生
+
+Mac ADOR Project:
+
+```text
+Local Library
+        ↓
+Local Source Provider
+        ↓
+Local ADORSystem
+        ↓
+Local AI / ChatGPT for Mac
+```
+
+Mac版ADOR Projectはローカルベースで運用する。
+
+---
+
+iPhone ADOR Lite:
+
+```text
+Drive Library
+        ↓
+Drive Source Provider
+        ↓
+Source Session
+        ↓
+ChatGPT for iPhone
+```
+
+iPhone版ADOR LiteはDriveベースで運用する。
+
+---
+
+## Relationship to Other Documents
+## 他文書との関係
+
+- 00_Workspace_Architecture defines workspace structure.
+- 02_Source_Management defines source lifecycle and format policy.
+- 90_Development_Guide defines development rules.
+- 91_Runtime_Implementation_Map maps rules to implementation areas.
+- 92_Runtime_Module_Specification defines Runtime module responsibilities.
+- 93_Runtime_Development_Log records decisions and development history.
+
+---
+
+## Revision History
+## 改訂履歴
+
+### v0.1
+
+- Created initial platform architecture.
+- Defined ADORLibrary, ADORSystem, ADORRuntime, AI Adapter, and Executor.
+- Established AI-agnostic platform principle.
+- Added storage-independent ADORLibrary principle.
+- Defined Mac ADOR Project as local-first.
+- Defined iPhone ADOR Lite as Drive-based Source Session.
+- Added Source Provider to Platform Flow.
+
+- 保存場所に依存しないADORLibrary原則を追加。
+- Mac版ADOR Projectをローカル優先として定義。
+- iPhone版ADOR LiteをDriveベースのSource Sessionとして定義。
+- Platform FlowにSource Providerを追加。

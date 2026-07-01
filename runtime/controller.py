@@ -5,6 +5,11 @@ from reconstruction_brief import (
     format_reconstruction_brief,
 )
 
+from distortion_brief import (
+    build_distortion_brief,
+    format_distortion_brief,
+)
+
 from loader import (
     bootstrap,
     list_characters,
@@ -22,7 +27,14 @@ def show_menu():
 
 def run_llm_distortion():
     print("LLM Distortion Mode")
-    print("Not implemented yet.")
+
+    bootstrap_status = bootstrap()
+    brief = build_distortion_brief(bootstrap_status)
+
+    print()
+    print(format_distortion_brief(brief))
+
+    return brief
 
 
 def run_reconstruction():
