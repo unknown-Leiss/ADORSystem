@@ -1,5 +1,5 @@
-# ADORSystem Runtime Module Specification
-# ADORSystem Runtime モジュール仕様
+# Exrela System Runtime Module Specification
+# Exrela System Runtime モジュール仕様
 
 ## Document Status
 
@@ -17,9 +17,9 @@ This document defines the responsibility of each Runtime module.
 
 この文書は、各Runtimeモジュールの責務を定義する。
 
-This document does not define Character identity or development rules.
+This document does not define Recognition identity or development rules.
 
-この文書はCharacter Identityや開発ルールを定義しない。
+この文書はRecognition Identityや開発ルールを定義しない。
 
 Those belong to:
 
@@ -67,9 +67,9 @@ Notes:
 # Planned Runtime Modules
 # 予定Runtimeモジュール
 
-- Character Context Runtime
+- Recognition Context Runtime
 - Meaning Extraction Runtime
-- Character Understanding Runtime
+- Recognition Understanding Runtime
 - Token Observation Runtime
 - Surface Organization Runtime
 - Recognition Runtime
@@ -121,7 +121,7 @@ Generate recognition candidates from organized observations.
 ### Must Not Do
 
 - Decide Meaning
-- Decide Identity
+- Define Recognition Identity
 - Collapse uncertainty into a single interpretation
 
 ### Related Rules
@@ -187,7 +187,7 @@ Recognition Module群を実行し、Recognition Candidateを収集する。
 - Decide Meaning
 - Resolve candidate conflicts
 - Perform structural organization
-- Determine Identity
+- Define Recognition Identity
 
 ### Related Rules
 

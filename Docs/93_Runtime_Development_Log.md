@@ -1,7 +1,5 @@
-
-
-# ADORSystem Runtime Development Log
-# ADORSystem Runtime 開発ログ
+# Exrela System Runtime Development Log
+# Exrela System Runtime 開発ログ
 
 ## Document Status
 
@@ -96,13 +94,13 @@ Documentation Runtime / Docs and Code Synchronization PoC
 
 Reason:
 
-ADORSystem development now requires Docs and runtime code to evolve together.
+Exrela System development now requires Docs and runtime code to evolve together.
 
 Docs should not remain separate from implementation decisions.
 
 Decision:
 
-Begin a PoC for a Documentation Runtime that can inspect code changes and generate update candidates for:
+Begin a PoC for a Exrela Documentation Runtime that can inspect code changes and generate update candidates for:
 
 - 91_Runtime_Implementation_Map
 - 92_Runtime_Module_Specification
@@ -123,7 +121,7 @@ Affected Documents:
 
 Affected Runtime:
 
-- Future documentation support runtime
+- Future Exrela Documentation Runtime
 
 Alternatives Considered:
 
@@ -142,7 +140,7 @@ Adopted as PoC direction.
 
 Next Action:
 
-Inspect current runtime files and decide where the first Documentation Runtime implementation should live.
+Inspect current runtime files and decide where the first Exrela Documentation Runtime implementation should live.
 
 Notes:
 
@@ -150,6 +148,58 @@ Notes:
 91 maps rules to implementation areas.
 92 defines module responsibilities.
 93 records development decisions and implementation history.
+
+---
+
+# Exrela System Version 1.0 Release
+
+Date:
+
+2026-07-01
+
+Topic:
+
+Exrela System Version 1.0 Freeze
+
+Reason:
+
+The initial design objectives for the Exrela System Definition, Runtime Suite, library architecture, and documentation framework were completed and verified.
+
+Decision:
+
+Freeze Exrela System Version 1.0 as the first stable specification baseline.
+
+Completed Scope:
+
+- Exrela System Definition (T1)
+- Exrela Runtime Suite (T2)
+- Exrela Library architecture (T0–T6)
+- Documentation set (90–93)
+- Library reorganization from ADOR to Exrela
+- Version 1.0 Git baseline
+
+Affected Documents:
+
+- T1 Definition
+- T2 Runtime Suite
+- T0 Index
+- Documentation (90–93)
+
+Affected Runtime:
+
+- Exrela Runtime Suite Version 1.0
+
+Status:
+
+Released
+
+Next Action:
+
+Begin Version 1.1 development and continue expansion of Recognition, Runtime, and implementation support.
+
+Notes:
+
+This release establishes the first official Exrela System baseline. Future development should extend Version 1.0 while preserving its architectural principles and responsibility boundaries.
 
 # Revision History
 
@@ -159,3 +209,8 @@ Notes:
 - Defined document responsibility.
 - Established development log template.
 - Recorded initial documentation milestone.
+
+## v1.0
+
+- Rebranded Runtime Development Log for Exrela System.
+- Updated Documentation Runtime terminology to Exrela Documentation Runtime.

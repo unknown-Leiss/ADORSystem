@@ -1,7 +1,6 @@
 
-
-# ADORSystem Runtime Implementation Map
-# ADORSystem Runtime 実装対応表
+# Exrela System Runtime Implementation Map
+# Exrela System Runtime 実装対応表
 
 ## Document Status
 ## 文書状態
@@ -20,9 +19,9 @@ This document maps development rules to implementation areas.
 
 この文書は、開発ルールを実装領域へ対応付ける。
 
-This document does not define ADOR philosophy, Character identity, or Runtime source rules.
+This document does not define Exrela philosophy, Recognition identity, or Runtime source rules.
 
-この文書は、ADOR思想・Character Identity・Runtime Source Ruleを定義しない。
+この文書は、Exrela思想・Recognition Identity・Runtime Source Ruleを定義しない。
 
 ---
 
@@ -157,32 +156,32 @@ Status:
 
 ---
 
-### Rule-027 — Support Variation Without Identity Collapse
-### Rule-027 — Variationを許容しIdentity Collapseを防ぐ
+### Rule-027 — Support Variation Without Recognition Collapse
+### Rule-027 — Variationを許容しRecognition Collapseを防ぐ
 
 Affected Runtime Area:
 
 - Meaning Verification Runtime
 - Scenario Interpretation Runtime
-- Character Package Handling
+- Recognition Package Handling
 
 Affected Files:
 
 - runtime/meaning_verification.py
 - runtime/scenario_interpretation.py
-- runtime/character_understanding.py
+- runtime/recognition_understanding.py
 
 Implementation Check:
 
-- Scenario, clothing, pose, environment, and expression changes are not automatically treated as identity loss.
-- Identity-critical elements must be checked before declaring collapse.
-- Variation should be separated from Recognition Drift and Identity Collapse.
+- Scenario, clothing, pose, environment, and expression changes are not automatically treated as recognition loss.
+- Recognition-critical elements must be checked before declaring collapse.
+- Variation should be separated from Recognition Drift and Recognition Collapse.
 
 実装確認:
 
-- シナリオ・衣装・ポーズ・環境・表情変化を自動的にIdentity喪失として扱わない。
-- Collapse判定前にIdentity Critical要素を確認する。
-- VariationをRecognition DriftおよびIdentity Collapseから分離する。
+- シナリオ・衣装・ポーズ・環境・表情変化を自動的にRecognition喪失として扱わない。
+- Collapse判定前にRecognition Critical要素を確認する。
+- VariationをRecognition DriftおよびRecognition Collapseから分離する。
 
 Status:
 
@@ -190,30 +189,30 @@ Status:
 
 ---
 
-### Rule-028 — Preserve Identity Critical Hierarchy
-### Rule-028 — Identity Critical階層を維持する
+### Rule-028 — Preserve Recognition Critical Hierarchy
+### Rule-028 — Recognition Critical階層を維持する
 
 Affected Runtime Area:
 
-- Character Understanding Runtime
+- Recognition Understanding Runtime
 - Meaning Verification Runtime
 - Scenario Interpretation Runtime
 
 Affected Files:
 
-- runtime/character_understanding.py
+- runtime/recognition_understanding.py
 - runtime/meaning_verification.py
 - runtime/scenario_interpretation.py
 
 Implementation Check:
 
-- Identity Critical, Identity Supporting, and Identity Expression are preserved as separate layers.
+- Recognition Critical, Recognition Supporting, and Recognition Expression are preserved as separate layers.
 - Runtime evaluation does not treat all extracted elements as equal priority.
 - Tier changes are reflected in verification and interpretation.
 
 実装確認:
 
-- Identity Critical・Identity Supporting・Identity Expressionを別Layerとして保持する。
+- Recognition Critical・Recognition Supporting・Recognition Expressionを別Layerとして保持する。
 - Runtime評価時に、抽出要素をすべて同じ優先度として扱わない。
 - Tierの違いをVerificationおよびInterpretationに反映する。
 
@@ -412,9 +411,9 @@ The following rules require mapping after current runtime files are reviewed.
 ### v0.1
 
 - Created initial implementation map.
-- Added priority mappings for Recognition Runtime and Identity Persistence related rules.
+- Added priority mappings for Recognition Runtime and Recognition Continuity related rules.
 - Separated development rules from implementation mapping.
 
 - 初期実装対応表を作成。
-- Recognition RuntimeおよびIdentity Persistence関連ルールの優先対応を追加。
+- Recognition RuntimeおよびRecognition Continuity関連ルールの優先対応を追加。
 - 開発ルールと実装対応表を分離。

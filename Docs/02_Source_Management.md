@@ -46,9 +46,9 @@ Each stage has a different responsibility.
 ## Document State
 ## 文書状態
 
-ADORSystem manages documents by lifecycle state rather than file format.
+Exrela System manages documents by lifecycle state rather than file format.
 
-ADORSystemではファイル形式ではなく、文書状態によって管理する。
+Exrela Systemではファイル形式ではなく、文書状態によって管理する。
 
 ### Draft
 
@@ -137,15 +137,15 @@ Deployment
 ## Library Architecture
 ## ライブラリアーキテクチャ
 
-ADORLibrary exists as the canonical knowledge asset.
+Exrela Library exists as the canonical knowledge asset.
 
-ADORLibraryは知識資産として存在する。
+Exrela Libraryは知識資産として存在する。
 
-ADORSystem is the local environment that consumes those knowledge assets to design, implement, verify, and operate Runtime.
+Exrela System is the local environment that consumes those knowledge assets to design, implement, verify, and operate Runtime.
 
-ADORSystemはADORLibraryを利用してRuntimeを設計・実装・検証・運用するローカル環境である。
+Exrela SystemはExrela Libraryを利用してRuntimeを設計・実装・検証・運用するローカル環境である。
 
-### Global ADORLibrary
+### Global Exrela Library
 
 Location
 
@@ -158,13 +158,13 @@ Purpose
 - Cross-device access
 - Long-term preservation
 
-The Global ADORLibrary is the authoritative research library.
+The Global Exrela Library is the authoritative research library.
 
-Global ADORLibraryは研究資産の正本である。
+Global Exrela Libraryは研究資産の正本である。
 
 ---
 
-### Local ADORSystem
+### Local Exrela System
 
 Location
 
@@ -178,16 +178,16 @@ Purpose
 - Git management
 - PDF generation
 
-The Local ADORSystem consumes the ADORLibrary and produces implementations.
+The Local Exrela System consumes the Exrela Library and produces implementations.
 
-Local ADORSystemはADORLibraryを利用して実装を構築する。
+Local Exrela SystemはExrela Libraryを利用して実装を構築する。
 
 ---
 
 ### Relationship
 
 ```text
-Global ADORLibrary
+Global Exrela Library
 (Google Drive)
         ↓
 Synchronization
@@ -199,18 +199,18 @@ Development Specifications
 Runtime
 ```
 
-The Global ADORLibrary remains the canonical research source.
+The Global Exrela Library remains the canonical research source.
 
-Global ADORLibraryは常に研究資産の正本として扱う。
+Global Exrela Libraryは常に研究資産の正本として扱う。
 
 ---
 
 ## Source Provider
 ## Source Provider
 
-ADORSystem does not depend on a single storage location.
+Exrela System does not depend on a single storage location.
 
-ADORSystemは単一の保存場所へ依存しない。
+Exrela Systemは単一の保存場所へ依存しない。
 
 Knowledge assets are accessed through a Source Provider abstraction.
 
@@ -354,9 +354,9 @@ Information should move through review before being promoted.
 
 Source Provider
 ≠
-ADORRuntime
+Exrela Runtime
 
-ADORRuntime
+Exrela Runtime
 ≠
 AI Adapter
 
@@ -373,10 +373,10 @@ Executor
 - Initial Source Management specification.
 - Defined source lifecycle.
 - Defined Google Docs, PDF, Markdown and ☆Docs responsibilities.
-- Defined Global ADORLibrary and Local ADORSystem responsibilities.
+- Defined Global Exrela Library and Local Exrela System responsibilities.
 - Added Library Architecture.
 
-- Global ADORLibraryとLocal ADORSystemの役割を定義。
+- Global Exrela LibraryとLocal Exrela Systemの役割を定義。
 - Library Architectureを追加。
 
 - Added Source Provider abstraction.
