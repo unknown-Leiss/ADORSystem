@@ -210,7 +210,58 @@ This release establishes the first official Exrela System baseline. Future devel
 - Established development log template.
 - Recorded initial documentation milestone.
 
-## v1.0
 
-- Rebranded Runtime Development Log for Exrela System.
-- Updated Documentation Runtime terminology to Exrela Documentation Runtime.
+-- Rebranded Runtime Development Log for Exrela System.
+-- Updated Documentation Runtime terminology to Exrela Documentation Runtime.
+
+---
+
+# Runtime Pre-Release — LLM Distortion Mode v0.1
+
+Date:
+
+2026-07-02
+
+Topic:
+
+LLM Distortion Runtime Pre-Release
+
+Reason:
+
+The Runtime was reorganized to establish a dedicated LLM Distortion mode before Character Reconstruction. This separates Runtime operational guidance from Character Package reconstruction and aligns Runtime responsibilities with the Exrela Information Source architecture.
+
+Decision:
+
+- Replaced the previous multi-mode controller with a two-mode structure.
+- Established Mode 1: LLM Distortion.
+- Established Mode 2: Reconstruction.
+- Runtime now reads Exrela Information Sources before formal reconstruction.
+- T1 Definition and T2 Runtime Suite are loaded as Runtime Information Sources during LLM Distortion.
+- Runtime does not perform source selection; Exrela-guided LLM is responsible for Information Source selection, Required Rail Extraction, and Prompt Artifact generation after Scenario understanding.
+
+Affected Documents:
+
+- T1 Exrela System Definition
+- T2 Runtime Suite
+- Runtime controller
+- distortion_brief
+- reconstruction_brief
+
+Affected Runtime:
+
+- Controller
+- Bootstrap
+- LLM Distortion
+- Reconstruction
+
+Status:
+
+Pre-Release v0.1 Completed
+
+Next Action:
+
+Extend Runtime State to retain and expose the complete text of each Character Package layer as Information Sources for Reconstruction.
+
+Notes:
+
+This milestone establishes the Runtime foundation where Information Sources are loaded before Character Reconstruction, while preserving Runtime responsibility separation and Information Source First.
