@@ -7,6 +7,8 @@ def build_character_context():
 
     context = {
         "identity": runtime_state.get("identity"),
+        "persistent_state": runtime_state.get("persistent_state"),
+        "physical": runtime_state.get("physical"),
         "behavior": runtime_state.get("behavior"),
         "recognition": runtime_state.get("recognition"),
         "verification": runtime_state.get("verification"),

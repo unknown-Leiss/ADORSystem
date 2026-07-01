@@ -1,33 +1,32 @@
 
-
-# 95-999 Profile Index
+# 95-999 Exrela Profile Index
 
 ## Purpose
 ## 目的
 
-This document defines all AI operation profiles used by ADORSystem.
+This document defines all AI operation profiles used by Exrela System.
 
-本書は、ADORSystemで使用するAI運用プロファイルを定義する。
+本書は、Exrela Systemで使用するAI運用プロファイルを定義する。
 
 Profiles are managed independently from Runtime specifications.
 
 プロファイルはRuntime仕様とは独立して管理する。
 
-The same ADORLibrary may be used by multiple AI implementations while each AI follows its own operational profile.
+The same Exrela Library may be used by multiple AI implementations while each AI follows its own operational profile.
 
-同一のADORLibraryを複数のAIが利用できる一方、それぞれ異なる運用プロファイルに従う。
+同一のExrela Libraryを複数のAIが利用できる一方、それぞれ異なる運用プロファイルに従う。
 
 ---
 
 # Profile Hierarchy
 
 ```text
-95_Project_Profiles
+95_Exrela_Profiles
 │
-├── 95-001_Mac_ChatGPT_Development_Profile
-├── 95-002_iPhone_ChatGPT_Source_Profile
-├── 95-003_Local_LLM_Development_Profile
-├── 95-004_ChatGPT_Runtime_Profile
+├── 95-001_Mac_Exrela_Development_Profile
+├── 95-002_iPhone_Exrela_Source_Profile
+├── 95-003_Local_LLM_Exrela_Profile
+├── 95-004_Exrela_Runtime_Profile
 └── 95-999_Profile_Index
 ```
 
@@ -35,11 +34,11 @@ The same ADORLibrary may be used by multiple AI implementations while each AI fo
 
 # Profile Responsibilities
 
-## 95-001 Mac ChatGPT Development
+## 95-001 Mac Exrela Development
 
 Purpose
 
-Development workspace for ADORSystem.
+Development workspace for Exrela System.
 
 Responsibilities
 
@@ -51,7 +50,7 @@ Responsibilities
 
 ---
 
-## 95-002 iPhone ChatGPT Source Session
+## 95-002 iPhone Exrela Source Session
 
 Purpose
 
@@ -67,7 +66,7 @@ Responsibilities
 
 ---
 
-## 95-003 Local LLM Development
+## 95-003 Local LLM Exrela
 
 Purpose
 
@@ -82,11 +81,11 @@ Responsibilities
 
 ---
 
-## 95-004 ChatGPT Runtime
+## 95-004 Exrela Runtime
 
 Purpose
 
-Runtime operation profile optimized for ChatGPT.
+Runtime operation profile optimized for Exrela.
 
 Responsibilities
 
@@ -110,9 +109,9 @@ Runtime specifications remain inside the 90–93 documentation.
 # Relationship
 
 ```text
-ADORLibrary
+Exrela Library
       ↓
-ADORSystem
+Exrela System
       ↓
 Project Profile
       ↓
